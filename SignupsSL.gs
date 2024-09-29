@@ -52,7 +52,7 @@
  5. A custom menu named "Actions" will be added to your Google Spreadsheet, providing various options for using the script.
 
  Estimatated size of the google sheet: after 1 year of continuous logging with 5 minute intervals approximately 1 MB.
- Google quota usage: 288 URL calls / day with 5 minute intervals (200000 available for private gmail accounts).
+ Google quota usage: 288 URL calls / day with 5 minute intervals (20000 available for private gmail accounts).
 
  To display the latest signups number on your google sites page:
 
