@@ -51,7 +51,8 @@
  4. Set a trigger in Extensions > Apps Script to run this function hourly via the triggers menu.
  5. A custom menu named "Actions" will be added to your Google Spreadsheet, providing various options for using the script.
 
- Estimated size after 1 year of continuous logging with 5 minute intervals is approximately 1 MB.
+ Estimatated size of the google sheet: after 1 year of continuous logging with 5 minute intervals approximately 1 MB.
+ Google quota usage: 288 URL calls / day with 5 minute intervals (200000 available for private gmail accounts).
 
  To display the latest online number on your google sites page:
 
@@ -134,6 +135,8 @@ function OnlineSL() {
     sheet.appendRow([online, customTime]);
 }
 
+// All code below this line can be removed if no custom menu is required and the script editor is used instead.
+
 function createTrigger() {
     // Delete existing triggers to avoid duplicates
     var triggers = ScriptApp.getProjectTriggers();
@@ -147,8 +150,6 @@ function createTrigger() {
         .everyMinutes(TIMER)
         .create();
 }
-
-// All code below this line can be removed if no custom menu is required and the script editor is used instead.
 
 function stopTrigger() {
     // Delete all triggers to stop the timer
